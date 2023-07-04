@@ -7,27 +7,27 @@ export const SideMenu = () => {
 
 return(
 
-    <div>
-        <div class="userDataContainer">
+    <div className="sideMenu">
+        <div className="userDataContainer">
             <div>
-                <img src={reactLogo} class="image" />
+                <img src={reactLogo} className="image" />
                 </div>
             <div >
-                <h1>User name</h1>
-                <h1>@User</h1>
+                <h1 className="text">User name</h1>
+                <h1 className="text">@User</h1>
             </div>
         </div>
 
-        <div class="account_balance">
-            <h1>$1,681.37</h1>
-            <h1>Account Balance</h1>            
+        <div className="account_balance">
+            <h1 className="text">$1,681.37</h1>
+            <h1 className="text">Account Balance</h1>            
         </div>
 
-        <div class="buttons">
-            <button> Home </button>
-            <button> My Account </button>
-            <button> Bank Account </button>
-            <button> Notifications </button>
+        <div className="buttonsContainer">
+            <button className="buttons"> Home </button>
+            <button className="buttons"> My Account </button>
+            <button className="buttons"> Bank Account </button>
+            <button className="buttons"> Notifications </button>
                       
         </div>
 

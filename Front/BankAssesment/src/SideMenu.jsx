@@ -27,9 +27,9 @@ return(
         </div>
 
         <div className="buttonsContainer">
-            <button className="buttons"> Home </button>
-            <button className="buttons"> My Account </button>
-            <button className="buttons" onClick = {() => {navigate("/")}}> Bank Account </button>
+            <button className="buttons" onClick = {() => {navigate("/usersettings")}}> Home </button>
+            <button className="buttons" onClick = {() => {navigate("/myaccount")}}> My Account </button>
+            <button className="buttons" onClick = {() => {navigate("/datapage")}}> Bank Account </button>
             <button className="buttons"> Notifications </button>
                       
         </div>

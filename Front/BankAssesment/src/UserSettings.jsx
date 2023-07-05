@@ -34,21 +34,19 @@ export const UserSettings = () => {
                     e.preventDefault();
                     handleSubmit(values)
                 }}>
-                    <div className="inputs-usersettings">
-                        <label>First Name</label>
-                        <input className="first-name" type="text" placeholder="First Name" id="firstname" name="firstname" onChange={handleChange} />
+                    <label>First Name</label>
+                    <input className="first-name" type="text" placeholder="First Name" id="firstname" name="firstname" onChange={handleChange} />
 
-                        <label>Last Name</label>
-                        <input  className="last-name" type="text" placeholder="Last Name" id="lastname" name="lastname" onChange={handleChange}/>
+                    <label>Last Name</label>
+                    <input  className="last-name" type="text" placeholder="Last Name" id="lastname" name="lastname" onChange={handleChange}/>
 
-                        <label>Username</label>
-                        <input className="username" type="text" placeholder="Username" id="username" name="username" onChange={handleChange}/>
+                    <label>Username</label>
+                    <input className="username" type="text" placeholder="Username" id="username" name="username" onChange={handleChange}/>
 
-                        <label>DNI</label>
-                        <input className="dni" type="text" placeholder="DNI" id="dni" name="dni" onChange={handleChange}/>
+                    <label>Password</label>
+                    <input className="password" type="text" placeholder="password" id="password" name="password" onChange={handleChange}/>
 
-                    </div>
-                    
+                
                     <button className="save-button" type="submit" >SIGN UP</button>
                 </form>
             </div>

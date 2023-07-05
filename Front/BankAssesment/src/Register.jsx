@@ -63,7 +63,7 @@ export const Register = () => {
               <label>Confirm Password</label>
               <input  type="password" placeholder="*******" id="confirmpassword" name="confirmpassword" onChange={handleChange}/>
               
-              <button className="sign-up-button" type="submit" onClick = {() => {navigate("/myaccount")}}>SIGN UP</button>
+              <button className="sign-up-button" type="submit" onClick = {() => {navigate("/usersettings")}}>SIGN UP</button>
           </form>
       </div>
     )

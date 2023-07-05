@@ -3,9 +3,6 @@ import reactLogo from './assets/user.jpg'
 import "./SideMenu.css" 
 import { useNavigate } from 'react-router-dom'
 
-
-
-
 export const SideMenu = () => {
 
     let navigate = useNavigate();
@@ -30,28 +27,12 @@ return(
         </div>
 
         <div className="buttonsContainer">
-            <button className="buttons"> Home </button>
-            <button className="buttons"> My Account </button>
-            <button className="buttons" onClick = {() => {navigate("/")}}> Bank Account </button>
+            <button className="buttons" onClick = {() => {navigate("/usersettings")}}> Home </button>
+            <button className="buttons" onClick = {() => {navigate("/myaccount")}}> My Account </button>
+            <button className="buttons" onClick = {() => {navigate("/datapage")}}> Bank Account </button>
             <button className="buttons"> Notifications </button>
                       
         </div>
-
-
-
-
-
-        
     </div>
-
-
-
-)
-
-  
-
-
-
-
-
+    )
 }

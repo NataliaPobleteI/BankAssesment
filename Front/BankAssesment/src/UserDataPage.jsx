@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { SideMenu } from './SideMenu'
+import { TopNavbar } from './TopNavbar'
 import './UserDataPage.css'
 import { AccountCard } from './AccountCard'
 
@@ -26,8 +26,10 @@ export const UserDataPage = () => {
      
     }
 return(
-
-    <div className='containerPage'>
+    <div>
+        <SideMenu/>
+        <TopNavbar/>
+        <div className='containerPage'>
         <div id='accountsContainer'>
             <div id='bankAccountTitle'>
                 <h1 className='textAccount' >Bank Account</h1>
@@ -49,6 +51,8 @@ return(
             </div>
         </div>
     </div>
+    </div>
+    
 
     )
 }

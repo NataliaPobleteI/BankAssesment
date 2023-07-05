@@ -16,7 +16,7 @@ public class UserDaoService {
 	
 	static
 	{
-		users.add(new User(++userId,"solera@solera.com", "bootcamp5"));
+		users.add(new User(++userId,"Natalia" , "Poblete","solera@solera.com", "bootcamp5"));
 		
 	}
 	

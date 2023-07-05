@@ -3,6 +3,7 @@ import { SideMenu } from './SideMenu'
 import { TopNavbar } from './TopNavbar'
 import './UserSettings.css'
 import { useNavigate } from 'react-router-dom'
+import UserService from './services/UserServices';
 
 export const UserSettings = () => {
 
@@ -18,13 +19,23 @@ export const UserSettings = () => {
         setError(validation(values));
     }
 
+    function loadValues() {
+        fetch('http://localhost:8082/api/user/1')
+      .then(response => response.json())
+      .then(data => {
+        setValues(data);    
+      })
+    }
+
     function handleChange(e) {
-        setValues({...values, 
-            [e.target.name]: e.target.value 
-        })
+        fetch('http://localhost:8082/api/user/1')
+      .then(response => response.json())
+      .then(data => {
+        setValues(data);    
+      })
     }
     return (
-        <div>
+        <div >
             <SideMenu/>
             <TopNavbar/>
             <h2>User Settings</h2>
@@ -35,16 +46,16 @@ export const UserSettings = () => {
                     handleSubmit(values)
                 }}>
                     <label>First Name</label>
-                    <input className="first-name" type="text" placeholder="First Name" id="firstname" name="firstname" onChange={handleChange} />
+                    <input className="first-name" type="text" placeholder={values.firstname} id="firstname" name="firstname" onChange={handleChange} />
 
                     <label>Last Name</label>
-                    <input  className="last-name" type="text" placeholder="Last Name" id="lastname" name="lastname" onChange={handleChange}/>
+                    <input  className="last-name" type="text" placeholder={values.lastname} id="lastname" name="lastname" onChange={handleChange}/>
 
                     <label>Username</label>
-                    <input className="username" type="text" placeholder="Username" id="username" name="username" onChange={handleChange}/>
+                    <input className="username" type="text" placeholder={values.username} id="username" name="username" onChange={handleChange}/>
 
                     <label>Password</label>
-                    <input className="password" type="text" placeholder="password" id="password" name="password" onChange={handleChange}/>
+                    <input className="password" type="text" placeholder={values.password}id="password" name="password" onChange={handleChange}/>
 
                 
                     <button className="save-button" type="submit" >SIGN UP</button>

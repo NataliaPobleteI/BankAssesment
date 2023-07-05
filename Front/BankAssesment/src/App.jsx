@@ -6,10 +6,12 @@ import { UserDataPage } from './UserDataPage';
 import { MyAccountPage } from './MyAccountPage';
 import { UserSettings } from './UserSettings';
 
+
 function App() {
- 
+  // serviceWorker.unregister();
   return (
     <div className="App">
+      {/* <UserComponent/> */}
       <BrowserRouter>
         <Routes>
           <Route path="/signup" element={<Register />} />

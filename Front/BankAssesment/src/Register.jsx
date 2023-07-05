@@ -12,7 +12,6 @@ export const Register = () => {
     lastname: "",
     username: "",
     password: "",
-    confirmpassword: "",
   })
 
   function handleChange(e) {
@@ -27,6 +26,7 @@ export const Register = () => {
       console.log(values) 
       setError(validation(values));
         
+      
     }
 
     return (

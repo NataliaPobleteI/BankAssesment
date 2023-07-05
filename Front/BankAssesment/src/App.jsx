@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Login } from "./Login";
 import { Register } from "./Register";
+import { SideMenu } from './SideMenu';
+import { TopNavbar } from './TopNavbar';
+import { UserDataPage } from './UserDataPage';
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -11,9 +14,15 @@ function App() {
   return (
     <>
       <div className="App">
-        {
-          <Register/>
-        }
+        
+        <div>
+        <SideMenu/>
+        </div>
+        <div>
+          <TopNavbar/>
+          <UserDataPage/>
+        </div>
+        
       </div>
     </>
   )

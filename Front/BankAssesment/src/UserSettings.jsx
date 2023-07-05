@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState , useEffect } from "react"
 import { SideMenu } from './SideMenu'
 import { TopNavbar } from './TopNavbar'
 import './UserSettings.css'
@@ -18,6 +18,13 @@ export const UserSettings = () => {
         console.log(values) 
         setError(validation(values));
     }
+    useEffect(() => {
+        let ignore = false;
+        
+        if (!ignore)  loadValues()
+        return () => { ignore = true; }
+        },[]);
+        
 
     function loadValues() {
         fetch('http://localhost:8082/api/user/1')

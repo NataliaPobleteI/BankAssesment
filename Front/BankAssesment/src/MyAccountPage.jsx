@@ -6,26 +6,17 @@ import { AccountCard } from './AccountCard'
 import { TransferCard } from './TransferCard'
 
 
-export const initialAccounts = [
-    { name: "O'Hara - Labadie Bank"},
+export const initialTransfer = [
+    { name: "Arely Kertzman", to:"Edgar Johns", money:"-$259.71"},
+    { name: "Ibrahim Dickens", to:"Edgar Johns", money:"-$140.36"},
+    { name: "Edgar Johns", to:"Ibrahim Dickens", money:"-$363.14"},
     
   ]
 
 
 export const MyAccountPage = () => {
     
-    
- 
-    const [accounts, setAccounts] = useState(initialAccounts);
-
-  
-    const handleCreate = () => {
-        setAccounts([
-            ...accounts,
-            { name: "O'Hara - Labadie Bank"}
-          ]);
      
-    }
 return(
 
     <div className='containerPage'>
@@ -46,10 +37,10 @@ return(
             <h2 className='greyText'> Personal </h2>
             <div>
             {
-                accounts.map((e, i) => {
+                initialTransfer.map((e, i) => {
                         return (
                         <div key={e.id} >
-                            { <TransferCard name={e.name}/> }
+                            { <TransferCard name={e.name} to={e.to} money = {e.money}/> }
                         </div>
 
                 )

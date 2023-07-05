@@ -5,7 +5,7 @@ import userImage from './assets/transferUser.png'
 
 
 
-export const TransferCard = ({name}) => {
+export const TransferCard = ({name, to, money}) => {
   
     return (
         <div id='transfer'>
@@ -14,7 +14,7 @@ export const TransferCard = ({name}) => {
             </div>
             <div className='fdf'>
                 <p className='greyText tranferText '>
-                    <b>Arely Kerzmann </b> paid <b>Edgar Johns</b>
+                    <b>{name} </b> paid <b>{to}</b>
                 </p>
                 
                 <p className='greyText  payment' >
@@ -23,7 +23,7 @@ export const TransferCard = ({name}) => {
                 
             </div>
             <div className='money'>
-                <h1>-$259.71</h1>
+                <h1>{money}</h1>
             </div>
         </div>
     )

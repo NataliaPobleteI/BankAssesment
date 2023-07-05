@@ -4,6 +4,8 @@
     position: absolute;
     bottom: 0; right: 0; top:10%;
     color: #2054bb;
+    font-display: center
+;
 }
 #accountsContainer
 {

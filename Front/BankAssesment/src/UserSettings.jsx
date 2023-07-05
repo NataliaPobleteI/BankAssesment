@@ -10,7 +10,7 @@ export const UserSettings = () => {
         firstname: "",
         lastname: "",
         username: "",
-        dni: "",
+        password: "",
     })
 
     function handleSubmit() {

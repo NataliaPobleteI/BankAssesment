@@ -1,0 +1,31 @@
+.containerPage{
+    background-color: whitesmoke;
+    
+    width:80%;
+    position: absolute;
+      bottom: 0; right: 0; top:10%;
+}
+#accountsContainer
+{
+    background-color:white;
+    
+    position: absolute;
+    bottom: 10%; ;right: 25%; top:10%; left: 25%;
+
+}
+#dropDown{
+    display: flex;
+    margin:3%;
+    justify-content:flex-start;
+}
+
+select{
+    border-radius: 25px;
+    border: 2px solid #2054bb;
+    padding: 1%;
+ 
+}
+
+.greyText{  
+    color: rgb(143, 142, 142);
+}

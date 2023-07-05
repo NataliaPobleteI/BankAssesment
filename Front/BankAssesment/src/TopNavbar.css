@@ -1,0 +1,28 @@
+
+.navbar {
+    background-color: #1f1b9b;
+
+    width: 80%;
+    height: 10%;
+    position: fixed;
+    top:0px;
+    right:0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+#newButton{
+    background-color: #18b672;
+    align-self: flex-end center;
+}
+.elh1 {
+
+    color:white;
+    font-size: 150%;
+    
+    align-self: center;
+}

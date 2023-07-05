@@ -1,0 +1,44 @@
+
+#transfer{
+    display: flex;
+   align-content: space-around;
+    border-color: grey;
+    
+
+}
+.imgContainer{
+    width: 10%;
+    height: 10%;   
+    align-self: center;  
+}
+
+.image {
+    max-height:100%; 
+    max-width:100%;
+   
+    min-width: 40%;
+}
+
+.fdf{
+    max-height:100%; 
+    max-width:100%;
+    margin-left: 1%;
+}
+.tranferText{
+   text-align: left;
+   font-size: 2vh;
+}
+.payment{
+    font-size: small;
+    
+    text-align: left;
+}
+.money{
+    
+    align-self: baseline left;
+}
+
+.money>h1{
+    color:red;
+    font-size: medium;
+}

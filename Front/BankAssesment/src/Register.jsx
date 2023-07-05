@@ -1,34 +1,72 @@
 import React, { useState } from "react"
+import {FaMoneyBillWave} from "react-icons/fa";
+import validation from "./validation";
 
 export const Register = () => {
-    const[firstname, setFirstName] = useState('');
-    const[lastname, setLastName] = useState('');
-    const[username, setUserName] = useState('');
-    const[pass, setPassword] = useState('');
-    const[confirmpass, setConfirmPassword] = useState('');
+  
+  const [values, setValues] = useState({
+    firstname: "",
+    lastname: "",
+    username: "",
+    password: "",
+    confirmpassword: "",
+  })
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(firstname, lastname, username, pass, confirmpass);
+  
+
+  function handleChange(e) {
+    setValues({...values, 
+      [e.target.name]: e.target.value 
+    })
+  }
+
+  
+
+
+  const [errors, setError] = useState({})
+
+  function handleSubmit() {
+      console.log(values) 
+      setError(validation(values));
+        
     }
 
     return (
-        <div className="auth-form-container">
-            <h2>Real World App</h2>
-            <h3 >Sign Up</h3>
-            <form className="register-form" onSubmit={handleSubmit}>
-                <label htmlFor="FirstName">First Name</label>
-                <input value={firstname} type="FirstName" placeholder="First Name" id="firstname" name="firstname"/>
-                <label htmlFor="LastName">Last Name</label>
-                <input value={lastname} type="LastName" placeholder="Last Name" id="lastname" name="lastname"/>
-                <label htmlFor="Username">Username</label>
-                <input value={username} type="Username" placeholder="Username" id="username" name="username"/>
-                <label htmlFor="Password">Password</label>
-                <input value={pass} type="Password" placeholder="*******" id="password" name="password"/>
-                <label htmlFor="ConfirmPassword">Confirm Password</label>
-                <input value={confirmpass} type="ConfirmPassword" placeholder="*******" id="confirmpassword" name="lasconfirmpassword"/>
-                <button className="sign-up-button" type="submit">SIGN UP</button>
-            </form>
-        </div>
+      <div className="auth-form-container">
+       
+          <div className="title-div">
+            <h2 className="title">Real World App</h2>
+            <FaMoneyBillWave className="logo"/>
+          </div>
+          <h3 >Sign Up</h3>
+         
+          <form className="register-form" onSubmit={(e)=> {
+            e.preventDefault();
+             handleSubmit(values)
+          }
+            }>
+              {errors.firstname && <p style={{color: "red", fontSize: "13px"}}>{errors.firstname}</p>}
+              <label>First Name</label>
+              <input type="text" placeholder="First Name" id="firstname" name="firstname" onChange={handleChange} />
+
+              {errors.lastname && <p style={{color: "red", fontSize: "13px"}}>{errors.lastname}</p>}
+              <label>Last Name</label>
+              <input  type="text" placeholder="Last Name" id="lastname" name="lastname" onChange={handleChange}/>
+
+              {errors.username && <p style={{color: "red", fontSize: "13px"}}>{errors.username}</p>}
+              <label>Username</label>
+              <input  type="text" placeholder="Username" id="username" name="username" onChange={handleChange}/>
+
+              {errors.password && <p style={{color: "red", fontSize: "13px"}}>{errors.password}</p>}              
+              <label>Password</label>
+              <input  type="password" placeholder="*******" id="password" name="password" onChange={handleChange}/>
+              
+              {errors.confirmpassword && <p style={{color: "red", fontSize: "13px"}}>{errors.confirmpassword}</p>}
+              <label>Confirm Password</label>
+              <input  type="password" placeholder="*******" id="confirmpassword" name="confirmpassword" onChange={handleChange}/>
+              
+              <button className="sign-up-button" type="submit" >SIGN UP</button>
+          </form>
+      </div>
     )
 }

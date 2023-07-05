@@ -15,35 +15,12 @@
 }
 
 
-.logo-solera {
-    width: 24%;
-    background: linear-gradient(to bottom, #2e2b78 10%, #3e2c78 20%, #4e2d78 30%, #5e2e78 40%, #6e2f78 50%, 
-             #7e3078 60%, #8e3178 70%, #9e3278 80%, #ae3378 90%, #be3478 100%);
-    border-bottom: 3px solid black;
-    border-radius: 50%;
-}
-
-@keyframes spin {
-    0% {transform: rotateY(0);}
-    100% {transform: rotateY(360deg)}
-}
-
-.logo-solera-img {
-     animation: spin 5s linear infinite; 
-} 
-.boton {
-    width: 100%;
-}
 #newButton{
     background-color: #18b672;
     align-self: flex-end center;
 }
 .elh1 {
-    /* margin-top:3%;
-    color:white;
-    font-size: 150%;
-    
-    font-weight: 500; */
+
     color:white;
     font-size: 150%;
     

@@ -10,6 +10,7 @@ import { Register } from "./Register";
 import { SideMenu } from './SideMenu';
 import { TopNavbar } from './TopNavbar';
 import { UserDataPage } from './UserDataPage';
+import { MyAccountPage } from './MyAccountPage';
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -23,6 +24,7 @@ function App() {
       <SideMenu/>
       <TopNavbar/>
         <Routes>
+          <Route path="/myAccount" element={<MyAccountPage/>} />
           <Route path="/signup" element={<Login/>} />
           <Route path='/' element={<UserDataPage />} />
         </Routes>

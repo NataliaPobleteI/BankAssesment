@@ -40,7 +40,7 @@ select{
     margin-top: 2%;
 }
 
-.first-name, .last-name, .username, .dni{
+.first-name, .last-name, .username, .password{
     display: flex;
     flex-direction: column;
     width: 75%;

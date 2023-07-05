@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import reactLogo from './assets/user.jpg'
 import "./SideMenu.css" 
+import { useNavigate } from 'react-router-dom'
+
+
+
 
 export const SideMenu = () => {
 
+    let navigate = useNavigate();
+ 
 
 return(
 
@@ -26,7 +32,7 @@ return(
         <div className="buttonsContainer">
             <button className="buttons"> Home </button>
             <button className="buttons"> My Account </button>
-            <button className="buttons"> Bank Account </button>
+            <button className="buttons" onClick = {() => {navigate("/")}}> Bank Account </button>
             <button className="buttons"> Notifications </button>
                       
         </div>

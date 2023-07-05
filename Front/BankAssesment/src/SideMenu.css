@@ -59,7 +59,7 @@
     top: 0;
     left: 0;
     
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     padding-top: 20px;
     justify-content: space-around;

@@ -1,0 +1,22 @@
+
+
+#account{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    justify-content: space-between;
+}
+
+h2{
+    width: stretch;
+    height: fit-content;
+    font-size: small;  
+    color:rgb(20, 69, 159)
+}
+
+#deleteButton
+{
+    background-color: rgb(249, 249, 251);
+    color: rgb(0, 0, 0);
+}

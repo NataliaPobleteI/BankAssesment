@@ -1,0 +1,34 @@
+.containerPage{
+    background-color: whitesmoke;
+    
+    width:80%;
+    position: absolute;
+      bottom: 0; ;right: 0; top:10%;
+}
+#accountsContainer
+{
+    background-color:white;
+    
+    position: absolute;
+    bottom: 25%; ;right: 25%; top:25%; left: 25%;
+
+}
+
+#bankAccountTitle{
+    display: flex;
+    margin:3%;
+    justify-content: space-between;
+}
+
+.textAccount{
+    width: stretch;
+    height: fit-content;
+    font-size:larger;  
+    color:rgb(20, 69, 159)
+}
+
+#createButton
+{
+    background-color: blue;
+    color: white;
+}

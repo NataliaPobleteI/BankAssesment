@@ -1,0 +1,62 @@
+.containerPage{
+    background-color: whitesmoke;
+    width:80%;
+    position: absolute;
+    bottom: 0; right: 0; top:10%;
+    color: #2054bb;
+}
+#accountsContainer
+{
+    background-color:white;
+    
+    position: absolute;
+    bottom: 10%; ;right: 25%; top:10%; left: 25%;
+
+}
+#dropDown{
+    display: flex;
+    margin:3%;
+    justify-content:flex-start;
+}
+
+select{
+    border-radius: 25px;
+    border: 2px solid #2054bb;
+    padding: 1%;
+ 
+}
+
+.greyText{  
+    color: rgb(143, 142, 142);
+}
+
+.user-settings-form {
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    border-radius: 5%;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.first-name, .last-name, .username, .dni{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 8%;
+
+}
+
+.save-button {
+    color: white;
+    background-color: #2054bb;
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 2%;
+    margin-left: 15%;
+}

@@ -1,9 +1,12 @@
 import React, { useState } from "react"
 import {FaMoneyBillWave} from "react-icons/fa";
 import validation from "./validation";
+import { useNavigate } from 'react-router-dom'
 
 export const Register = () => {
   
+  let navigate = useNavigate();
+
   const [values, setValues] = useState({
     firstname: "",
     lastname: "",
@@ -12,16 +15,11 @@ export const Register = () => {
     confirmpassword: "",
   })
 
-  
-
   function handleChange(e) {
     setValues({...values, 
       [e.target.name]: e.target.value 
     })
   }
-
-  
-
 
   const [errors, setError] = useState({})
 
@@ -65,7 +63,7 @@ export const Register = () => {
               <label>Confirm Password</label>
               <input  type="password" placeholder="*******" id="confirmpassword" name="confirmpassword" onChange={handleChange}/>
               
-              <button className="sign-up-button" type="submit" >SIGN UP</button>
+              <button className="sign-up-button" type="submit" onClick = {() => {navigate("/myaccount")}}>SIGN UP</button>
           </form>
       </div>
     )

@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './MyAccountPage.css'
 import { AccountCard } from './AccountCard'
 import { TransferCard } from './TransferCard'
+import { SideMenu } from './SideMenu'
+import { TopNavbar } from './TopNavbar'
 
 
 export const initialTransfer = [
@@ -18,37 +20,41 @@ export const MyAccountPage = () => {
     
      
 return(
+    <div>
+        <SideMenu/>
+        <TopNavbar/>
+        <div className='containerPage'>
+            <div id='accountsContainer'>
+                <div id='dropDown'>
+                    <select id="dateDropdown">
+                        <option>Date: All</option>
+                        <option>Date: Last hour</option>
+                        <option>Date: 24 hours</option>
+                        <option>Date: Last Month</option>
+                    </select>
+                    <select id="amountDorpdown">
+                        <option>Amount: $0-$100</option>
+                        <option>Amount: $100-$1,000</option>
+                        <option>Amount: $1,000-$10,000</option>
+                    </select>
+                </div>
+                <h2 className='greyText'> Personal </h2>
+                <div>
+                {
+                    initialTransfer.map((e, i) => {
+                            return (
+                            <div key={e.id} >
+                                { <TransferCard name={e.name} to={e.to} money = {e.money}/> }
+                            </div>
 
-    <div className='containerPage'>
-        <div id='accountsContainer'>
-            <div id='dropDown'>
-                <select id="dateDropdown">
-                    <option>Date: All</option>
-                    <option>Date: Last hour</option>
-                    <option>Date: 24 hours</option>
-                    <option>Date: Last Month</option>
-                </select>
-                <select id="amountDorpdown">
-                    <option>Amount: $0-$100</option>
-                    <option>Amount: $100-$1,000</option>
-                    <option>Amount: $1,000-$10,000</option>
-                </select>
-            </div>
-            <h2 className='greyText'> Personal </h2>
-            <div>
-            {
-                initialTransfer.map((e, i) => {
-                        return (
-                        <div key={e.id} >
-                            { <TransferCard name={e.name} to={e.to} money = {e.money}/> }
-                        </div>
-
-                )
-                })
-            }
+                    )
+                    })
+                }
+                </div>
             </div>
         </div>
     </div>
+    
 
     )
 }

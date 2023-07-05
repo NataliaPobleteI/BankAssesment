@@ -3,9 +3,6 @@ import reactLogo from './assets/user.jpg'
 import "./SideMenu.css" 
 import { useNavigate } from 'react-router-dom'
 
-
-
-
 export const SideMenu = () => {
 
     let navigate = useNavigate();
@@ -36,22 +33,6 @@ return(
             <button className="buttons"> Notifications </button>
                       
         </div>
-
-
-
-
-
-        
     </div>
-
-
-
-)
-
-  
-
-
-
-
-
+    )
 }

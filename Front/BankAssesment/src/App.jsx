@@ -16,15 +16,12 @@ function App() {
        <Register/>
       {/*<TopNavbar/> */}
         <Routes>
-<<<<<<< Updated upstream
-          <Route path="/myAccount" element={<MyAccountPage/>} />
-          <Route path="/signup" element={<Login/>} />
-=======
+          
+          {/* <Route path="/myAccount" element={<MyAccountPage/>} />
         <Route path="/myaccount/" element={<SideMenu/>} />
-        <Route path="/myaccount/" element={<SideMenu/>} />
+        <Route path="/myaccount/" element={<SideMenu/>} /> */}
           {/* <Route path="/signup" element={<Register/>} /> */}
->>>>>>> Stashed changes
-          <Route path='/' element={<UserDataPage />} />
+          <Route path='/a' element={<UserDataPage />} />
         </Routes>
       </BrowserRouter>
 

@@ -5,6 +5,7 @@ import { Register } from "./Register";
 import { UserDataPage } from './UserDataPage';
 import { MyAccountPage } from './MyAccountPage';
 import { UserSettings } from './UserSettings';
+import { Login } from './Login';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       {/* <UserComponent/> */}
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/usersettings" element={<UserSettings />} />
           <Route path="/myaccount"element={<MyAccountPage/>}/>

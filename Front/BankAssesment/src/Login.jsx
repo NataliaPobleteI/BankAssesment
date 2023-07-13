@@ -7,11 +7,8 @@ export const Login = () => {
   
   const [values, setValues] = useState({
     type: 'login',
-    firstname: "",
-    lastname: "",
     username: "",
-    password: "",
-    confirmpassword: "",
+    password: ""
   })
 
   
@@ -40,32 +37,21 @@ export const Login = () => {
             <h1 className="title">Real World App</h1>
             <FaMoneyBillWave className="logo"/>
           </div>
-          <h3 >Sign Up</h3>
+          <h3 >Log in</h3>
          
           <form className="login-form" onSubmit={(e)=> {
             e.preventDefault();
              handleSubmit(values)
           }
             }>
-              {errors.firstname && <p style={{color: "orange", fontSize: "13px"}}>{errors.firstname}</p>}
-              <label>First Name</label>
-              <input type="text" placeholder="First Name" id="firstname" name="firstname" onChange={handleChange} />
 
-              {errors.lastname && <p style={{color: "orange", fontSize: "13px"}}>{errors.lastname}</p>}
-              <label>Last Name</label>
-              <input  type="text" placeholder="Last Name" id="lastname" name="lastname" onChange={handleChange}/>
-
-              {errors.username && <p style={{color: "orange", fontSize: "13px"}}>{errors.username}</p>}
               <label>Username</label>
               <input  type="text" placeholder="Username" id="username" name="username" onChange={handleChange}/>
-
-              {errors.password && <p style={{color: "orange", fontSize: "13px"}}>{errors.password}</p>}              
+              {errors.username && <p style={{color: "orange", fontSize: "13px"}}>{errors.username}</p>}
+              
               <label>Password</label>
               <input  type="password" placeholder="*******" id="password" name="password" onChange={handleChange}/>
-              
-              {errors.confirmpassword && <p style={{color: "orange", fontSize: "13px"}}>{errors.confirmpassword}</p>}
-              <label>Confirm Password</label>
-              <input  type="password" placeholder="*******" id="confirmpassword" name="confirmpassword" onChange={handleChange}/>
+              {errors.password && <p style={{color: "orange", fontSize: "13px"}}>{errors.password}</p>}
               
               <button className="sign-in-button" type="submit" >SIGN IN</button>
           </form>

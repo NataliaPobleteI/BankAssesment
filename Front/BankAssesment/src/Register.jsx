@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useState,useEffect } from "react"
 import {FaMoneyBillWave} from "react-icons/fa";
-import validation from "./validation";
+import Validation from "./validation";
 import { useNavigate } from 'react-router-dom'
 import './Register.css'
 
@@ -14,6 +14,7 @@ export const Register = () => {
     lastname: "",
     username: "",
     password: "",
+    isValid: null,
   })
 
   function handleChange(e) {
@@ -24,10 +25,22 @@ export const Register = () => {
 
   const [errors, setError] = useState({})
 
+  useEffect(() => {
+
+    if (errors.isValid) {
+      navigate('/usersettings')
+      console.log(errors) 
+    }
+
+  },[errors])
+
   function handleSubmit() {
       console.log(values) 
-      setError(validation(values));
-        
+      
+      setError(Validation(values));
+      console.log(errors) 
+
+      
       
     }
 
@@ -45,27 +58,32 @@ export const Register = () => {
              handleSubmit(values)
           }
             }>
-              {errors.firstname && <p style={{color: "orange", fontSize: "13px"}}>{errors.firstname}</p>}
+              
               <label>First Name</label>
               <input type="text" placeholder="First Name" id="firstname" name="firstname" onChange={handleChange} />
+              {errors.firstname && <p style={{color: "orange", fontSize: "13px"}}>{errors.firstname}</p>}
 
-              {errors.lastname && <p style={{color: "orange", fontSize: "13px"}}>{errors.lastname}</p>}
+              
               <label>Last Name</label>
               <input  type="text" placeholder="Last Name" id="lastname" name="lastname" onChange={handleChange}/>
+              {errors.lastname && <p style={{color: "orange", fontSize: "13px"}}>{errors.lastname}</p>}
 
-              {errors.username && <p style={{color: "orange", fontSize: "13px"}}>{errors.username}</p>}
+              
               <label>Username</label>
               <input  type="text" placeholder="Username" id="username" name="username" onChange={handleChange}/>
+              {errors.username && <p style={{color: "orange", fontSize: "13px"}}>{errors.username}</p>}
 
-              {errors.password && <p style={{color: "orange", fontSize: "13px"}}>{errors.password}</p>}              
+                          
               <label>Password</label>
               <input  type="password" placeholder="*******" id="password" name="password" onChange={handleChange}/>
+              {errors.password && <p style={{color: "orange", fontSize: "13px"}}>{errors.password}</p>}  
               
-              {errors.confirmpassword && <p style={{color: "orange", fontSize: "13px"}}>{errors.confirmpassword}</p>}
+              
               <label>Confirm Password</label>
               <input  type="password" placeholder="*******" id="confirmpassword" name="confirmpassword" onChange={handleChange}/>
+              {errors.confirmpassword && <p style={{color: "orange", fontSize: "13px"}}>{errors.confirmpassword}</p>}
               
-              <button className="sign-up-button" type="submit" onClick = {() => {navigate("/usersettings")}}>SIGN UP</button>
+              <button className="sign-up-button" type="submit" >SIGN UP</button>
           </form>
       </div>
     )

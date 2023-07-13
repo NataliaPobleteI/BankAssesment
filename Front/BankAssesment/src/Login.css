@@ -30,6 +30,7 @@
   
   .sign-in-button {
     border:none;
+    margin-top: 5%;
     color:  #182666;
     background: linear-gradient(180deg,  #ccc8ee 0%,  #e6e4f1 50%, #ec9a6b 49%,  #ffdbc7 100%);
     background-size: 1px 100px;

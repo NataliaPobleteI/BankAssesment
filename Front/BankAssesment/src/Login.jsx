@@ -1,15 +1,21 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {FaMoneyBillWave} from "react-icons/fa";
-import validation from "./validation";
+import { useNavigate } from 'react-router-dom';
+import Validation from "./validation";
 import './Login.css'
 
+
 export const Login = () => {
+
+  let navigate = useNavigate();
   
   const [values, setValues] = useState({
     type: 'login',
     username: "",
-    password: ""
+    password: "",
+    isValid: null,
   })
+
 
   
 
@@ -19,14 +25,24 @@ export const Login = () => {
     })
   }
 
+  const [errors, setError] = useState({
+    isValid: false,
+  })
+
+  useEffect(() => { //componentDidMount
+    console.log(values.isValid) 
+    if (values.isValid) {
+      navigate('/usersettings')
+      console.log(errors) 
+    }
+
+  },[errors])
+
   
 
-
-  const [errors, setError] = useState({})
-
   function handleSubmit() {
-      console.log(values) 
-      setError(validation(values));
+      
+      setError(Validation(values));
         
     }
 
@@ -53,7 +69,12 @@ export const Login = () => {
               <input  type="password" placeholder="*******" id="password" name="password" onChange={handleChange}/>
               {errors.password && <p style={{color: "orange", fontSize: "13px"}}>{errors.password}</p>}
               
-              <button className="sign-in-button" type="submit" >SIGN IN</button>
+              <button 
+              className="sign-in-button" 
+              type="submit" 
+              name="sign-in"
+              disabled={values.username.length<1 ? true : false}
+              >SIGN IN</button>
           </form>
       </div>
     )

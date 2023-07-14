@@ -38,12 +38,19 @@
     border-radius: 10px;
     cursor: pointer;
     transition: all .3s;
+    
   }
 
   .sign-in-button:hover {
     background-position: 0 -50px;
     transition: all .3s;
   }
+
+  .sign-in-button:disabled {
+    background:  #b2b2b3;
+  }
+
+
   
   h1 {
     font-size: 1.5rem;

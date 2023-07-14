@@ -54,9 +54,7 @@ const Validation = (values) => {
             values.isValid = false;
         }
     }
-
-    
-    errors.isValid="holaaaaaa"
+    console.log(values.isValid);
     return errors;
 }
 export default Validation;

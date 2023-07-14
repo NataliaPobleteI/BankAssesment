@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react"
 import {FaMoneyBillWave} from "react-icons/fa";
 import Validation from "./validation";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import './Register.css'
 
 export const Register = () => {
@@ -25,7 +25,7 @@ export const Register = () => {
 
   const [errors, setError] = useState({})
 
-  useEffect(() => {
+  useEffect(() => { //componentDidMount
 
     if (errors.isValid) {
       navigate('/usersettings')

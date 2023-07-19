@@ -2,6 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom'
  import "./TopNavbar.css"
  import { useNavigate } from 'react-router-dom'
+ import { FaMoneyBillWave} from "react-icons/fa";
 
  
 
@@ -22,7 +23,10 @@ const TopNavbar = () => {
 
       </div>
         <div >
-          <h1 className="elh1">Real World App</h1>
+          <h1 className="elh1">
+            <FaMoneyBillWave className='topIcon'/>
+            Real World App
+          </h1>
         </div>
         
         <div >

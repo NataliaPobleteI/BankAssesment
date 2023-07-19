@@ -27,7 +27,7 @@ export const Register = () => {
 
   useEffect(() => { //componentDidMount
 
-    if (errors.isValid) {
+    if (values.isValid) {
       navigate('/usersettings')
       console.log(errors) 
     }
@@ -83,7 +83,9 @@ export const Register = () => {
               <input  type="password" placeholder="*******" id="confirmpassword" name="confirmpassword" onChange={handleChange}/>
               {errors.confirmpassword && <p style={{color: "orange", fontSize: "13px"}}>{errors.confirmpassword}</p>}
               
-              <button className="sign-up-button" type="submit" >SIGN UP</button>
+              <button className="sign-up-button" type="submit" 
+              disabled={values.username.length<1 ? true : false}
+              >SIGN UP</button>
           </form>
       </div>
     )

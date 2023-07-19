@@ -65,7 +65,7 @@ export const UserSettings = () => {
                     <input className="password" type="text" placeholder={values.password}id="password" name="password" onChange={handleChange}/>
 
                 
-                    <button className="save-button" type="submit" >SIGN UP</button>
+                    <button className="save-button" type="submit" >UPDATE</button>
                 </form>
             </div>
         </div>

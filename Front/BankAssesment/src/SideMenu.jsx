@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import userImage from './assets/user.jpg'
 import "./SideMenu.css" 
 import { useNavigate } from 'react-router-dom'
-import { FaHome,FaUserAlt,FaPiggyBank ,FaBell} from "react-icons/fa";
+import { FaHome,FaUserAlt,FaPiggyBank ,FaBell,FaBed} from "react-icons/fa";
 
 
 
@@ -45,6 +45,10 @@ return(
             <button className="buttons"> 
                 <FaBell className='icon'/>
                 Notifications 
+            </button>
+            <button className="buttons" onClick = {() => {navigate("/")}}> 
+                <FaBed className='icon'/>
+                Log Out 
             </button>
                       
         </div>

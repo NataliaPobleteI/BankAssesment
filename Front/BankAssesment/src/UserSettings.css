@@ -40,6 +40,9 @@ select{
     width: 75%;
     margin-left: 10%;
     margin-top: 2%;
+
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .first-name, .last-name, .username, .password{
@@ -58,6 +61,7 @@ select{
 
     display: flex;
     flex-direction: column;
+    
     width: 30%;
     margin-bottom: 2%;
     margin-left: 15%;
